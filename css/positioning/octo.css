@@ -1,0 +1,27 @@
+body {
+    background-color: white;
+}S
+
+.octoman {
+	position: relative;
+}
+.hat { 
+	position: absolute;
+	top: 135px; 
+    left: 375px; 
+   }
+
+.octopus {  
+	position: absolute;
+	margin-top: 200px;
+    margin-bottom: 100px;
+    margin-right: 170px;
+    margin-left: 380px;
+    z-index: -1;
+}
+
+.glasses { 
+   position: absolute; 
+   top: 305px; 
+   left: 430px; 
+}
