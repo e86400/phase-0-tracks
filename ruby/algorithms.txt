@@ -1,0 +1,33 @@
+
+# Using an Elevator
+
+- while outside, press elevator up or down button and wait until it opens
+- go inside elevator
+- press button 4
+
+- puts "The human resources office is on floor 4. Is this floor 4?" (y/n)
+input = gets.chomp
+
+- if input == "y"
+	floor_4 = TRUE
+  else
+  	floor_4 = FALSE
+  end
+- when you arrive at floor 4, get off elevator
+
+
+
+
+# Check the weather for a run
+
+- press home button twice on phone 
+- enter password ####
+- click weather app
+- puts "Is the weather dry and above 40 degrees?" (y/n)
+- input = gets.chomp
+- if input == "y"
+	running = TRUE
+  else
+  	running = FALSE
+  end
+ - puts "Are you going for a run today?"
