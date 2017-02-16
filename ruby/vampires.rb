@@ -52,9 +52,15 @@ insurance = gets.chomp
 #		puts "Probably a vampire."
 #	end
 
+<<<<<<< Updated upstream
 prompt = "> "
 puts "Please list allergies one at a time, then type done when finished."
 print prompt
+=======
+# prompt = "> "
+# puts "Please list allergies one at a time, then type done when finished."
+# print prompt
+>>>>>>> Stashed changes
 
 #while user_input = gets.chomp # loop while getting user input
 #  case user_input
