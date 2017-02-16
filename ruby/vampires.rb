@@ -43,39 +43,25 @@ insurance = gets.chomp
 	end
 
 
+print "Please list allergies one at a time (hit enter after typing each), then type done when finished. "
+  answer = gets.chomp
 
-# finish this part --------------------------
-# allergies = gets.chomp
-#	until "done" || "sunshine"
-#		break
-#	if allergies = "sunshine"
-#		puts "Probably a vampire."
-#	end
+loop do
+  print "What else?"
+  answer = gets.chomp.downcase
+  
+  if answer == "sunshine"
+  	sus_allergy = true
+  	puts "Probably a vampire."
+    break 
+  elsif answer == "done"
+  	puts "Thank you."
+    break
+   else answer = false
+  end
+end
+  
 
-<<<<<<< Updated upstream
-prompt = "> "
-puts "Please list allergies one at a time, then type done when finished."
-print prompt
-=======
-# prompt = "> "
-# puts "Please list allergies one at a time, then type done when finished."
-# print prompt
->>>>>>> Stashed changes
-
-#while user_input = gets.chomp # loop while getting user input
-#  case user_input
-#  when "sunshine"
-#   puts "Probably a vampire."
-#    break 
-#  when gets.chomp
-#    puts "Second response"
-#    break 
-# else
-#   puts "Invalid user input. Please try again."
-#   print prompt 
-# end
-#end 
-#
 	if year_born && (eats_garlic || wants_insurance)
 		puts "Probably not a vampire."
 	elsif !year_born && (!eats_garlic || !wants_insurance)
@@ -84,6 +70,8 @@ print prompt
 		puts "Almost certainly a vampire."
 	elsif weird_name 
 		puts "Definitely a vampire."
+	elsif sus_allergy
+		break
 	else
 		puts "Results inconclusive."
 	end
@@ -92,5 +80,5 @@ print prompt
 x += 1
 
 
- "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 end
