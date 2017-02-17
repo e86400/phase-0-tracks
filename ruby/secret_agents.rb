@@ -1,41 +1,48 @@
 
 # An Encrypt Method 
 # we defined our encryption method
-def method_encryption (string)
-index = 0  
 # we set up a while condition
+# set up conditional logic for our string and "a" to "z" 
+# we set up our "string" argument so that our user input should move to the next letter 
+# we print the string
+# we called the driver codes to test our methods
+
+def method_encryption (string) 
+index = 0
+
   while index < string.length
-# set up conditional logic for our string and "a" to "z"   
-  	if string[index] == "z"
+    if string[index] == "z"
     string[index] = "a"
-  	else
- # we set up our "string" argument so that our user input should move to the next letter
+    else
     string[index] = string[index].next!
-  	end
+    end
   index += 1
   end
-# we print the string
-puts string
+  string
 end
-# we called the driver codes to test our methods
+
 method_encryption("abc")
 method_encryption("zed")
 
 
+
 # Decryption Method
 # we defined our decryption method
+# we set up conditions for previous letter
+# we print the string
+# we defined the method to the argument "letter"
+# we set up a condition for our edge case with "method_previous"
+# we called the driver codes to test our methods
+
 def method_decryption (string)
 index = 0
-# we set up conditions for previous letter
   while index < string.length
     string[index] = method_previous(string[index])
     index += 1
   end
-# we print the string
-puts string
+  string
 end
 
-# we defined the method to the argument "letter"
 def method_previous (letter)
 alphabet = ("a".."z").to_a
 
@@ -43,11 +50,12 @@ alphabet = ("a".."z").to_a
     alphabet[index-1]
 
 end 
-# we called the driver codes to test our methods
+
 method_decryption ("bcd")
 method_decryption ("afe")
-
+method_encryption('abc')
 method_decryption(method_encryption("swordfish"))
+
 
 # Ask Secret Agent for Password
 
@@ -57,17 +65,13 @@ loop do
 
     if method_encryption_or_method_decryption == "encryption"
         puts("encrypted, We got you!")
-    
-    break
-
+     break
     elsif method_encryption_or_method_decryption == "decryption"
         puts("decrypted, alright we got you!")
-        
-    break    
-
+     break    
     else
         puts("please enter encrypt or decrypt.") 
-        end
+    end
 end
 
 puts("What's the password?!")
