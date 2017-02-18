@@ -1,0 +1,36 @@
+body {
+  position: relative;
+}
+
+h1 {
+  font-family: 'Oxygen', sans-serif;
+  text-align: center;
+  color: red;
+}
+
+h2 {
+  font: century gothic;
+  text-decoration: underline;
+}
+
+section.column-1 {
+  float: left;
+  vertical-align: top;
+  width: 45%;
+  margin-right: 5%;
+}
+
+section.column-2 {
+  float: left;
+  vertical-align: top;
+  width: 45%;
+
+}
+
+footer {
+  font-style: arial;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  clear: both;
+}
