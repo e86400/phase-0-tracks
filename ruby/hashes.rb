@@ -1,62 +1,82 @@
 # Write a program that will allow users to enter data
 # Enter the name of the document at the top
 # Ask the user to input informatiom
-# Create 
-
-h = {} 
-#h["a"] = "apple"
-#h["a"] = "dog"
-puts "enter age"
-age = gets.chomp
-p age
-#p h 
-
-
-#input = ""
-
-#until input == "Done"
-	# your code here
-#end
-
+# Create an empty hash
+# Prompt and allow an interior designer to enter the details of a given client: the client's name, age, number of children, decor theme
+# save each detail into created hash
+# Convert any user input to the appropriate data type.
+# Print the hash back out to the screen when the designer has answered all of the questions.
+# Give the user the opportunity to update a key, if "none", skip it. 
+# If the user enters name of what they'd like to change, allow them to input the correction
+# Overwrite the existing value pair  
+# Print the latest version of the hash, and exit the program.
 
 puts "Interior Designer Job Application"
+puts "Please enter the following:"
 
-information_hash = {}
+client_information = {}
 
-puts "Enter full name"
+puts "Full name:"
 full_name = gets.chomp
+client_information["full_name"] = full_name
 
-information_hash["full_name"] = full_name
 
-puts "Enter age:"
+puts "Age:"
 age = gets.chomp.to_i 
-
-information_hash["age"] = age
+client_information["age"] = age
  
-puts "Enter number of children:"
+ 
+puts "Number of children:"
 number_of_children = gets.chomp.to_i 
-
-information_hash["number_of_children"] = number_of_children
+client_information["number_of_children"] = number_of_children
  
-puts "Enter decor theme"
+ 
+puts "Decor theme:"
 decor_theme = gets.chomp
+client_information["decor_theme"] = decor_theme
 
-information_hash["decor_theme"] = decor_theme
+p client_information
 
-p information_hash
-#puts "Is this correct?"
-#information_hash.each do |key, value|
- # puts "#{key} => #{value}"
-#end 
- 
-# p information_hash
-puts "Do you want to edit your information?"
+# p "Name: #{full_name}"
+# p "Age: #{age}"
+# p "Number of children: #{number_of_children}"
+# p "Decor theme: #{decor_theme}"
+
+puts "Are there any changes you would like to make to the information entered above? Please specify where by typing: 'name', 'age', 'number of children', 'decor theme', or 'none' if there are no changes."
+
 edit_info = gets.chomp
 
-if edit_info == "yes"
-  # prompt them for key that they want to change
-  # promt them to enter correct name 
-  # overwrite the existing key value pair 
+if edit_info == "none"
+  puts "Thank you."
+elsif "name"
+  puts "Please enter the correct information:"
+  client_information[edit_info] = gets.chomp
+elsif "age"
+  puts "Please enter the correct information:"
+  client_information[edit_info] = gets.chomp
+elsif "number of children"
+  puts "Please enter the correct information:"
+  client_information[edit_info] = gets.chomp
+elsif "decor theme"
+  puts "Please enter the correct information:"
+  client_information[edit_info] = gets.chomp
+else 
+  "This is the end of our application."
 end 
+
+puts "Thank you."
+p client_information
+
+
+
+
+
+
+
+
+
+
+
+
 
 
