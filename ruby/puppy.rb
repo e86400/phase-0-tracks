@@ -1,3 +1,4 @@
+# 6.1 Intro to classes 
 
 =begin
 Species (Class)
@@ -13,5 +14,18 @@ behavior (methods)
 -aggression level
 -playfulness level
 -activeness level 
-=end 
+
+# -----------------------------
+
+class CanisLupusFamiliaris
+	def characteristics()
+		puts ""
+	end
+
+	def behavior()
+		puts ""
+	end 
+end 
+
+=end
 
