@@ -48,15 +48,39 @@ class Automobile
     end
 end
 
-my_auto = []
 
-50.times_each do 
+my_auto = []
+50.times do 
   auto = Automobile.new
   my_auto << auto
 end
 
-my_auto.each {|brand|}
-#missing release 2 #3
+p my_auto
+
+cars = []
+cars.each do|brand|
+  cars << my_auto.brand
+  cars << my_auto.model
+end 
+p cars 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
