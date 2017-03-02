@@ -55,14 +55,20 @@ my_auto = []
   my_auto << auto
 end
 
-p my_auto
+# p my_auto
 
-cars = []
-cars.each do|brand|
-  cars << my_auto.brand
-  cars << my_auto.model
-end 
-p cars 
+# cars = []
+# cars.each do|brand|
+#   cars << my_auto.brand
+#   cars << my_auto.model
+# end 
+# p cars 
+
+auto = Automobile.new
+
+a = Array.new(50, auto ) 
+
+p a
 
 
 
