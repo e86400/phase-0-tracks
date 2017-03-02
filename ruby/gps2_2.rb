@@ -30,3 +30,39 @@
 # steps: go through each item within the hash and print the desired values 
 # output: an organized version of the hash 
 
+def create_list(groceries)
+  $grocery_list = groceries.split(" ")
+  quantity= []
+
+  $grocery_list.length.times do
+   quantity << 1
+ end
+  quantity
+  $grocery_list
+end
+
+def add_item(additional_item)
+  $grocery_list << additional_item
+end
+
+def remove_item(deleted_item)
+  if $grocery_list.include?(deleted_item)
+    deleted_index = $grocery_list.index(deleted_item)
+    $grocery_list.delete_at(deleted_index)
+  end
+  
+def updated_quantities(item, updated_quantity)
+	if $grocery_list.include?(item)
+		update = $grocery_list.index(item)
+ 		$grocery_list.delete_at(update)
+ 		item = item.split(" ")
+		$grocery_list << item * updated_quantity
+
+	end 
+end 
+$grocery_list
+end 
+create_list("carrots apples cereal pizza")
+add_item("sea food")
+remove_item("carrots")
+updated_quantities("pizza",2)
